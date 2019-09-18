@@ -1,0 +1,122 @@
+body
+{
+flex-flow: flex-wrap; 	
+margin: 25px;
+background-color: #2a3439;
+background-image: url(Image3.png);
+background-size: cover;
+background-repeat: no-repeat;
+color: white;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 20px;
+text-align: center;		
+}
+.header
+{
+text-align: center;	
+}
+
+.home
+{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(100,100,100,0.5);
+  border: none;
+  color: rgb(255,255,255);
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: grab;
+  margin: 5px;
+}
+.home span 
+{  
+  cursor: grab;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.home span:after {
+ 
+  content: '\00bb';
+  position: relative;
+  opacity: 0;
+  top: 0;
+  right: -50px;
+  transition: 0.5s;
+}
+.home:hover span {
+  padding-right: 25px;
+}
+.home:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.nav
+{
+text-align: right;	
+}
+
+footer{
+
+align-self: auto;	
+}
+
+.svg-wrapper {
+  display: inline-block;
+  text-align: center;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  color: white;
+}
+.shape 
+{
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+}
+
+.text 
+{
+  color: white;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.6s draw linear forwards;
+  animation: 0.6s draw linear forwards;
+  color: white;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+
